@@ -2,20 +2,17 @@ var t = document.getElementById("mydiv");
 var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
 t.onmousedown = getPosition;
 
-
+// lay toa do khi mousedown
 function getPosition(ev) {
 	ev = ev || window.event;
 	ev.preventDefault();
 	pos3 = ev.clientX;
 	pos4 = ev.clientY;
-	t.onmouseup = resetPosition;
-	t.onmousemove = updatePosition;
-	
-	console.log(pos3, pos4);
-
+	document.onmouseup = resetPosition;
+	document.onmousemove = updatePosition;
 }
 
-// cap nhat lai vi tri khi mousemove
+// cap nhat lai vi tri khi mousemove, tra ve vi tri hien tai
 function updatePosition(ev) {
 	ev = ev || window.event;
 	ev.preventDefault();
@@ -29,6 +26,7 @@ function updatePosition(ev) {
 
 }
 
+// dung viec di chuyen khi mouseup
 function resetPosition() {
 	document.onmouseup = null;
 	document.onmousemove = null;
