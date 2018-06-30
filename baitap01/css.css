@@ -1,0 +1,9 @@
+#mydiv {
+	position: absolute;
+	border: 1px solid grey;
+	text-align: center;
+	cursor: move;
+	background: #f00;
+	color: #fff;
+}
+
